@@ -1,0 +1,1 @@
+const apiUrl = "https://blog.raddishai.no/wp-json/wp/v2/recipe";
