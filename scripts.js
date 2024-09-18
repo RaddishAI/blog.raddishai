@@ -42,3 +42,72 @@ fetchProducts();
         console.error("Error:", error);
     });
     */
+
+    // generate pages based on arrays
+
+    function displayBlogs() { 
+        const postContainers = document.querySelectorAll('.post-container');
+    
+        data.forEach(product => {
+            const generalProductElement = createGeneralProductElement(product);
+            generateMoviePage(product); 
+            postContainers.forEach(container => {
+                let blogElement = generalProductElement.cloneNode(true);
+            
+                blogElement.addEventListener('click', () => {
+                    localStorage.setItem('selectedRecipie', JSON.stringify(product));
+                    window.location.href = `pages/specificBlogPage.html?id=${product.id}`;
+                });
+            
+                container.appendChild(blogElement); 
+            });
+        });
+    }
+
+    function createGeneralProductElement(product) {
+        const generalProductElement = document.createElement('div');
+        generalProductElement.dataset.id = product.id; 
+        
+        generalProductElement.innerHTML =
+        `
+            <img src="${product.image}" alt="Cover of ${product.title}">
+            <br>
+            <h2>${product.title}</h2>
+        `;
+    
+         generalProductElement.addEventListener('click', () => {
+            localStorage.setItem('selectedRecipie', JSON.stringify(product));
+            window.location.href = `pages/specificBlogPage.html?productId=${product.id}`;
+        }); 
+    
+        return generalProductElement;
+    }
+
+
+    function generateBlogPage(product) {
+        const blogPage = document.createElement('html');
+        
+        const imageUrl = product.image || 'default-image-url';  // Replace with fetchImageById if needed
+        const imgAltText = product.imgalt || product.title;
+    
+        blogPage.innerHTML = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Raddishai - ${product.title}</title>
+                <link rel="stylesheet" href="style.css">
+                <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+            </head>
+            <body>
+                <div id="post-container">
+                    <h2>${product.title}</h2>
+                    <img src="${imageUrl}" alt="${imgAltText}">
+                    <p>${product.acf.ingress}</p> <!-- Assuming ingress exists in product.acf -->
+                </div>
+                <script src="script.js"></script>
+            </body>
+            </html>
+        `;
+    }

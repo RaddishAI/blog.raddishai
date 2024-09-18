@@ -1,23 +1,35 @@
+/* Navigation Menu */
+.navigationMeny {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+/* Carousel container and layout */
 .carousel-container {
     position: relative;
     width: 100%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    height: 300px; /* Define a fixed height to vertically center items */
 }
 
 .carousel-wrapper {
     display: flex;
     width: 100%;
+    height: 100%; /* Ensure the wrapper takes up the full height */
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-.product-link:visited {
-    color: inherit; /* Ensure the color remains the same after being clicked */
+    align-items: center; /* Vertically center the carousel items */
+    justify-content: flex-start; /* Align items to the start of the carousel */
+    height: 100%; /* Ensure full height for alignment */
 }
 
 .carousel-item {
@@ -25,8 +37,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Vertically center the content within each item */
     padding: 10px;
+    height: 100%; /* Ensure the item takes full height of the carousel */
 }
 
 .carousel-item img {
@@ -34,16 +47,16 @@
     height: 200px;             /* Set a fixed height for cropping */
     object-fit: cover;         /* This will crop the image from the center */
     border-radius: 10px;       /* Keep rounded corners */
-    /* transition: transform 0.5s; Smooth hover effect (removed) */
 }
 
-/* Removed hover effect from images */
-/*
-.carousel-item img:hover {
-    transform: scale(1.05);
+.carousel-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 }
-*/
 
+/* Carousel navigation buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
