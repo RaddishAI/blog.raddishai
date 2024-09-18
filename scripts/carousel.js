@@ -16,7 +16,7 @@ function moveSlide(step) {
     // Prevent the carousel from going beyond the last item
     if (currentSlide >= totalSlides) {
         currentSlide = totalSlides - 1; // Stay on the last slide
-    } else if (currentS  lide < 0) {
+    } else if (currentSlide < 0) {
         currentSlide = 0; // Stay on the first slide
     }
 
