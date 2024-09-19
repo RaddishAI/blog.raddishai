@@ -12,7 +12,7 @@ async function fetchProducts() {
     }
 }
 
-async function fetchImageById(imageId) {
+/* async function fetchImageById(imageId) {
     try {
         const response = await fetch(`https://blog.raddishai.no/wp-json/wp/v2/media/${imageId}`);
         if (!response.ok) throw new Error('Failed to fetch image');
@@ -22,7 +22,7 @@ async function fetchImageById(imageId) {
         console.error('Error fetching image:', error);
         return 'default-image-url'; // Fallback in case the image can't be fetched
     }
-}
+} */
 
 // Call fetchProducts to load carousel items on page load
 fetchProducts();
