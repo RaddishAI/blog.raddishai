@@ -55,11 +55,11 @@ async function displayProductsInCarousel(products) {
         }
 
         productDiv.innerHTML = `
-            <a href="pages/specificBlogPage.html?productId=${product.id}" class="product-link" style="text-decoration: none; width: 100%">
-                <img src="${imageUrl}" alt="${imgAltText}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                <p style="text-align: center;">${product.acf.title || product.title.rendered}</p>
-            </a>
-        `;
+        <a href="pages/specificBlogPage.html?productId=${product.id}" class="product-link">
+            <img src="${imageUrl}" alt="${imgAltText}" class="product-img">
+            <p class="product-title">${product.acf.title || product.title.rendered}</p>
+        </a>
+    `;
 
         carouselSlide.appendChild(productDiv);
     }

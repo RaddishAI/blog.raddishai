@@ -329,3 +329,57 @@ button[type="submit"]:hover {
 }
 
  */
+
+ /* Carousel styling */
+ .product-link {
+    text-decoration: none;
+    width: 100%;
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-title {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Modal styling */
+
+#image-modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Ensures it appears on top */
+}
+
+#image-modal.open {
+    display: flex; /* Shows the modal when open class is added */
+}
+
+#modal-image {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+#image-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}

@@ -76,7 +76,7 @@ function setupImageModal(imageUrl, imgAltText) {
     const blogImage = document.querySelector(".clickable-image");
 
     blogImage.onclick = function() {
-        modal.style.display = "flex";
+        modal.classList.add('open');
         modalImg.src = imageUrl;
         modalImg.alt = imgAltText;
     };
