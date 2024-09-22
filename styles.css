@@ -17,6 +17,8 @@ footer {
     background-color: #007f66;
 } */
 
+/* GLOBAL */
+
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 
@@ -25,6 +27,14 @@ footer {
     font-weight: 400;
     font-style: normal;
   }
+
+  a {
+    color: #F5EFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 * {
     margin: 0;
@@ -58,6 +68,8 @@ header {
     text-align: center;
 }
 
+
+/* NAV element */
 nav {
     display: flex;
     align-items: center; 
@@ -71,13 +83,21 @@ header nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #FFD700; /* Golden color on hover */
+}
+
 /* Main Content */
 main {
     flex: 1;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 20px;
     min-height: 600px;
+}
+
+main h1, main h2, main p {
+    margin-bottom: 20px; 
 }
 
 /* Footer */
@@ -85,8 +105,19 @@ footer {
     background-color: #A5441A;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 /* Responsiveness */
@@ -112,11 +143,11 @@ footer {
 /* Carousel container and layout */
 .carousel-container {
     position: relative;
+    margin: 40px auto; /* Center horizontally and add space */
     width: 100%;
     max-width: 1000px;
-    margin: auto;
     overflow: hidden;
-    height: 300px; 
+    height: 300px;
 }
 
 .carousel-wrapper {
