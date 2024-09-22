@@ -16,7 +16,7 @@ async function fetchBlogDetails(productId) {
     }
 }
 
-// Function to fetch image by ID
+
 async function fetchImageById(imageId) {
     try {
         const response = await fetch(`https://blog.raddishai.no/wp-json/wp/v2/media/${imageId}`);
@@ -28,39 +28,6 @@ async function fetchImageById(imageId) {
         return 'default-image-url'; // Fallback image URL
     }
 }
-
-// Fetch blog/product details and display them using innerHTML
-/* async function displayBlogDetails() {
-    const blog = await fetchBlogDetails(productId);
-
-    if (blog) {
-        // Set the page title dynamically
-        document.title = `My Blog | ${blog.title.rendered}`;
-        
-        // Fetch image URL using the image ID
-        const imageUrl = await fetchImageById(blog.acf.image);
-
-        // Build the blog details content using innerHTML
-        const blogContent = `
-            <h1>${blog.title.rendered}</h1>
-            <h2>Funfacts</h2>
-            <p>${blog.acf.ingress}</p>
-            <div class="recipe-image-div">
-                <img id="recipe-image" src="${imageUrl}" alt="${blog.acf.imgalt || blog.title.rendered}" class="clickable-image">
-            </div>
-                <h3>Ingredients</h3>
-            <ul>${formatIngredients(blog.acf.ingredients)}</ul>
-        `;
-
-        // Set the innerHTML of a container on the page
-        document.getElementById('blog-details').innerHTML = blogContent;
-
-        // Optional: add modal functionality for the image
-        setupImageModal(imageUrl, blog.acf.imgalt || blog.title.rendered);
-    } else {
-        document.getElementById('blog-details').innerHTML = "<p>Blog post not found</p>";
-    }
-} */
 
     async function displayBlogDetails() {
         const blog = await fetchBlogDetails(productId);
