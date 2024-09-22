@@ -1,11 +1,112 @@
 /* Navigation Menu */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4e2926;
+}
+
+main {
+    background-color: #b5d3d5;
+}
+
+footer {
+    background-color: #007f66;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 700; 
+    font-size: 2rem; 
+    color: #F5EFFF;
+    flex-basis: 16.66%; 
+}
+
+/* Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F3E5AB
+}
+
+/* Header */
+header {
+    background-color: #4e2926; 
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+header nav a {
+    color: #F5EFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    min-height: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #A5441A;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
+
 .navigationMeny {
     text-decoration: none;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    flex-basis: 50%;
+    margin-left: 16.66%
+}
+
+.navigationMeny li {
+    margin: 0 10px;
 }
 
 /* Carousel container and layout */
@@ -15,38 +116,38 @@
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
-    height: 300px; /* Define a fixed height to vertically center items */
+    height: 300px; 
 }
 
 .carousel-wrapper {
     display: flex;
     width: 100%;
-    height: 100%; /* Ensure the wrapper takes up the full height */
+    height: 100%; 
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    align-items: center; /* Vertically center the carousel items */
-    justify-content: flex-start; /* Align items to the start of the carousel */
-    height: 100%; /* Ensure full height for alignment */
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%;
 }
 
 .carousel-item {
-    flex: 0 0 300px; /* Set a fixed width for each carousel item */
+    flex: 0 0 300px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Vertically center the content within each item */
+    justify-content: center; 
     padding: 10px;
-    height: 100%; /* Ensure the item takes full height of the carousel */
+    height: 100%; 
 }
 
 .carousel-item img {
-    width: 100%;               /* Make sure the image takes up the full width of its container */
-    height: 200px;             /* Set a fixed height for cropping */
-    object-fit: cover;         /* This will crop the image from the center */
-    border-radius: 10px;       /* Keep rounded corners */
+    width: 100%;       
+    height: 200px;           
+    object-fit: cover;         
+    border-radius: 10px;       
 }
 
 .carousel-item p {
