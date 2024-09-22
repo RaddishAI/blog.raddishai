@@ -64,3 +64,24 @@ async function displayProductsInCarousel(products) {
         carouselSlide.appendChild(productDiv);
     }
 }
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.querySelector('.carousel-slide').addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+document.querySelector('.carousel-slide').addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    if (touchEndX < touchStartX) {
+        moveSlide(1);
+    }
+    if (touchEndX > touchStartX) {
+        moveSlide(-1); 
+    }
+}

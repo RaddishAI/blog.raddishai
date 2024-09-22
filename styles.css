@@ -88,7 +88,7 @@ nav a {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem; /* Adjust the size here */
+    font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -114,6 +114,33 @@ main p {
 main h1, main h2, main p {
     margin-bottom: 20px; 
 } 
+
+/* main responsive */ 
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        max-width: 100vw;
+        padding: 20px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+}
 
 h1 {
     text-align: left;
@@ -201,7 +228,7 @@ footer div {
 /* Carousel container and layout */
 .carousel-container {
     position: relative;
-    margin: 40px auto; /* Center horizontally and add space */
+    margin: 40px auto; 
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
@@ -210,33 +237,31 @@ footer div {
 
 .carousel-wrapper {
     display: flex;
-    width: 100%;
-    height: 100%; 
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; 
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    align-items: center; 
-    justify-content: flex-start; 
-    height: 100%;
+    align-items: center;
 }
 
 .carousel-item {
-    flex: 0 0 300px; 
+    flex: 0 0 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 10px;
-    height: 100%; 
 }
 
 .carousel-item img {
     width: 100%;       
-    height: 200px;           
-    object-fit: cover;         
-    border-radius: 10px;       
+    height: 200px;
+    object-fit: cover;   
+    border-radius: 10px;
 }
 
 .carousel-item p {
@@ -244,6 +269,35 @@ footer div {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
+}
+
+/* carousel resp */
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        max-width: 100vw;
+    }
+
+    .carousel-item {
+        flex: 0 0 80%;
+        padding: 5px;
+    }
+
+    .prev, .next {
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+    }
+
+    .carousel-item img {
+        width: 100%;     
+        height: 150px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
 }
 
 /* Carousel navigation buttons */
@@ -257,6 +311,7 @@ footer div {
     font-size: 18px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10; 
     transform: translateY(-50%);
 }
 
