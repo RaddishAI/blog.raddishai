@@ -6,7 +6,7 @@ async function fetchProducts() {
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('Failed to fetch products');
         const products = await response.json();
-        displayProductsInCarousel(products); // Use the carousel display function
+        displayProductsInCarousel(products); 
     } catch (error) {
         console.error('Error fetching products:', error);
     }

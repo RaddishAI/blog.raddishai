@@ -4,7 +4,7 @@ const productId = urlParams.get('productId');
 
 // Function to fetch blog/product details based on the productId
 async function fetchBlogDetails(productId) {
-    const apiUrl = `https://blog.raddishai.no/wp-json/wp/v2/recipe/${productId}`; // Adjust the API URL as per your setup
+    const apiUrl = `https://blog.raddishai.no/wp-json/wp/v2/recipe/${productId}`; 
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('Failed to fetch blog details');

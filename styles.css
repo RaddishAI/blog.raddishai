@@ -404,25 +404,24 @@ button[type="submit"]:hover {
 /* Blog specific pages */
 
 #recipe-image {
-    height: 100%;
-    width:100%;
-    object-fit: cover; 
-    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
 }
  
 .recipe-image-div {
-    height: 400px;
-    width:600px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
 }
 
-.specific-blog-image {
-    width: 100%; 
+#recipe-image, .specific-blog-image {
+    width: 100%;   
     max-width: 600px; 
-    height: auto; 
+    height: 600px;   
     object-fit: cover; 
-    display: block; 
-    margin: 0 auto;
+    border-radius: 10px; 
 }
 
 .specific-blog-text {
