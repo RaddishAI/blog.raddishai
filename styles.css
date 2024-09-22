@@ -28,9 +28,15 @@ footer {
     font-style: normal;
   }
 
-  a {
-    color: #F5EFFF;
+nav a {
+    color: #CDC1FF;
     padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a {
+    color: #CDC1FF;
     text-decoration: none;
     font-weight: bold;
 }
@@ -46,7 +52,7 @@ footer {
     font-family: "Shadows Into Light", cursive;
     font-weight: 700; 
     font-size: 2rem; 
-    color: #F5EFFF;
+    color: #CDC1FF;
     flex-basis: 16.66%; 
 }
 
@@ -76,11 +82,12 @@ nav {
     justify-content: flex-start;
 }
 
-header nav a {
-    color: #F5EFFF;
+nav a {
+    color: #CDC1FF;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem; /* Adjust the size here */
 }
 
 nav a:hover {
