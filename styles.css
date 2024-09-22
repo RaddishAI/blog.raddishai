@@ -189,16 +189,17 @@ footer div {
 
 @media (max-width: 768px) {
     nav {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start; 
+        justify-content: flex-start;
     }
 
     #menu-toggle {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 50%;
         right: 20px;
+        transform: translateY(-50%);
         background: none;
         border: none;
         font-size: 2rem;
