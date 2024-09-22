@@ -188,9 +188,17 @@ footer div {
 /* Nav resp */
 
 @media (max-width: 768px) {
- 
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
     #menu-toggle {
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
         background: none;
         border: none;
         font-size: 2rem;
