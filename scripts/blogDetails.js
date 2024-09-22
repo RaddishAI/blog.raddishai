@@ -45,8 +45,10 @@ async function displayBlogDetails() {
             <h1>${blog.title.rendered}</h1>
             <h2>Funfacts</h2>
             <p>${blog.acf.ingress}</p>
-            <img src="${imageUrl}" alt="${blog.acf.imgalt || blog.title.rendered}" class="clickable-image">
-            <h3>Ingredients</h3>
+            <div class="recipe-image-div">
+                <img id="recipe-image" src="${imageUrl}" alt="${blog.acf.imgalt || blog.title.rendered}" class="clickable-image">
+            </div>
+                <h3>Ingredients</h3>
             <ul>${formatIngredients(blog.acf.ingredients)}</ul>
         `;
 

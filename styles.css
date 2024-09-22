@@ -103,6 +103,7 @@ main {
     align-items: center;
     margin: 40px auto;
     padding: 20px;
+    justify-content: center;
 }
 
 main p {
@@ -112,13 +113,13 @@ main p {
 
 main h1, main h2, main p {
     margin-bottom: 20px; 
-}
+} 
 
 h1 {
     text-align: left;
     align-self: flex-start; 
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 /* Footer */
@@ -299,3 +300,32 @@ button[type="submit"]:hover {
     color: #333;
     margin-bottom: 20px;
 }
+
+/* Blog spesific pages */
+
+#recipe-image {
+    height: 100%;
+    width:100%;
+    object-fit: cover; 
+    display: block;
+    margin: 20px auto; 
+    border-radius: 10px;
+}
+ 
+.recipe-image-div {
+    height: 400px;
+    width:600px;
+}
+
+
+
+/*
+#blog-details{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items:center;
+    width:80%;
+}
+
+ */
