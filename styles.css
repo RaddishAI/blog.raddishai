@@ -301,14 +301,13 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
 }
 
-/* Blog spesific pages */
+/* Blog specific pages */
 
 #recipe-image {
     height: 100%;
     width:100%;
     object-fit: cover; 
     display: block;
-    margin: 20px auto; 
     border-radius: 10px;
 }
  
@@ -317,18 +316,30 @@ button[type="submit"]:hover {
     width:600px;
 }
 
+.specific-blog-image {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.specific-blog-text {
+    text-align: left; 
+    margin: 20px auto; 
+    max-width: 600px; 
+    line-height: 1.6; 
+}
 
 
-/*
 #blog-details{
     display:flex;
     flex-direction:column;
     gap:16px;
-    align-items:center;
-    width:80%;
+    align-items:flex-start;
+    width:80vw;
 }
-
- */
 
  /* Carousel styling */
  .product-link {

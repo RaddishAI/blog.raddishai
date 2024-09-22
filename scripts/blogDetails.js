@@ -30,7 +30,7 @@ async function fetchImageById(imageId) {
 }
 
 // Fetch blog/product details and display them using innerHTML
-async function displayBlogDetails() {
+/* async function displayBlogDetails() {
     const blog = await fetchBlogDetails(productId);
 
     if (blog) {
@@ -60,15 +60,44 @@ async function displayBlogDetails() {
     } else {
         document.getElementById('blog-details').innerHTML = "<p>Blog post not found</p>";
     }
-}
+} */
 
-// Helper function to format ingredients list
+    async function displayBlogDetails() {
+        const blog = await fetchBlogDetails(productId);
+    
+        if (blog) {
+
+            document.title = `My Blog | ${blog.title.rendered}`;
+            
+            const imageUrl = await fetchImageById(blog.acf.image);
+    
+            const blogContent = `
+                    <h1>${blog.title.rendered}</h1>
+                    <h2>Funfacts</h2>
+                    <p>${blog.acf.ingress}</p>
+                    <div class="recipe-image-div">
+                        <img id="recipe-image" src="${imageUrl}" alt="${blog.acf.imgalt || blog.title.rendered}" class="clickable-image">
+                    </div>
+                    <h3>Ingredients</h3>
+                    <ul>${formatIngredients(blog.acf.ingredients)}</ul>
+            `;
+
+            document.getElementById('blog-details').innerHTML = blogContent;
+    
+            document.querySelector("#recipe-image").classList.add("specific-blog-image");
+    
+
+            setupImageModal(imageUrl, blog.acf.imgalt || blog.title.rendered);
+        } else {
+            document.getElementById('blog-details').innerHTML = "<p>Blog post not found</p>";
+        }
+    }
+
 function formatIngredients(ingredients) {
     const ingredientsList = ingredients.split("\r\n").map(ingredient => `<li>${ingredient}</li>`);
     return ingredientsList.join("");
 }
 
-// Optional: Modal functionality for larger image view
 function setupImageModal(imageUrl, imgAltText) {
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("modal-image");
@@ -91,5 +120,5 @@ function setupImageModal(imageUrl, imgAltText) {
     };
 }
 
-// Call the displayBlogDetails function to build the page
+
 displayBlogDetails();

@@ -87,7 +87,7 @@ fetchProducts();
     function generateBlogPage(product) {
         const blogPage = document.createElement('html');
         
-        const imageUrl = product.image || 'default-image-url';  // Replace with fetchImageById if needed
+        const imageUrl = product.image || 'default-image-url'; 
         const imgAltText = product.imgalt || product.title;
     
         blogPage.innerHTML = `
